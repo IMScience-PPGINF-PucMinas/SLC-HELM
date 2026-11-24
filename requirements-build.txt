@@ -1,0 +1,13 @@
+# Graph-building environment (superpixels with DISF, which needs NumPy 1.x), Python 3.10:
+#   conda create -n slc-helm-build python=3.10 && conda activate slc-helm-build
+#   pip install -r requirements-build.txt
+# then build and install the Python bindings of DISF from source: https://github.com/LIDS-UNICAMP/DISF
+# Used by build_dataset.py, search_build.py and prepare_images.py (BUILD_PYTHON of the scripts).
+# Keep torchvision/pillow/opencv at these versions: the augmentations of the stored maps were generated with them.
+numpy==1.24.3
+torch==2.0.0
+torchvision==0.15.0
+pillow==9.4.0
+opencv-python-headless==4.7.0.72
+scipy==1.10.1
+tqdm

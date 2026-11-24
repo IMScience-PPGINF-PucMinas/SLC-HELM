@@ -1,0 +1,12 @@
+{
+  "n_nodes": 300,
+  "percentile": 35.0,
+  "threshold": "batch",
+  "lr": 0.00041068533420337373,
+  "dropout": 0.1,
+  "heads": 4,
+  "embedding_size": 64,
+  "num_clusters": 16,
+  "label_smoothing": 0.2,
+  "weight_decay": 6.268295138622747e-07
+}

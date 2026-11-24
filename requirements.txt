@@ -1,0 +1,23 @@
+# Training / test / search environment (Python 3.12), pip only:
+#   python3.12 -m venv ~/venvs/slc-helm && source ~/venvs/slc-helm/bin/activate
+#   pip install --upgrade pip && pip install -r requirements.txt
+# torch 2.6.0 from PyPI is the CUDA 12.4 build (NVIDIA driver with CUDA 12 support).
+# The PyG extensions (pyg_lib, torch_scatter, torch_sparse, ...) are not needed: PyG falls back to native PyTorch ops.
+# Keep the pinned versions of torchvision, numpy, pillow and opencv: on RESISC45 and AID the augmented training
+# images are rebuilt at load time and must be the ones the superpixel maps were built from (check_dataset.py checks it).
+torch==2.6.0
+torchvision==0.21.0
+torch-geometric==2.6.1
+numpy==2.2.4
+scipy==1.15.2
+scikit-learn==1.6.1
+pandas==2.2.3
+pillow==11.1.0
+opencv-python-headless==4.11.0.86
+matplotlib==3.10.1
+seaborn==0.13.2
+mlflow==2.21.3
+tqdm==4.67.1
+optuna==5.0.0
+# Only for resisc45/export_raw.py (download of the torchgeo RESISC45 splits):
+# torchgeo==0.7.0
