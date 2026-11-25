@@ -77,7 +77,7 @@ comparison on these two datasets must be read with care.
 | DFAGCN\* | — | — | 89.21 | 94.88 |
 | HGTNet\* | 68.5M | — | 95.75 ± 0.10 | 96.91 ± 0.14 |
 | **CNN approaches** | | | | |
-| MobileNetV3-Small† (from scratch) | 1.5M | 96.56 ± 0.24 | 92.89 ± 0.36 | — |
+| MobileNetV3-Small† (from scratch) | 1.5M | 96.56 ± 0.24 | 92.89 ± 0.36 | 95.77 ± 0.34 |
 | GASSL | 25.6M | 96.38 | 93.06 | 93.55 |
 | CACo | 25.6M | 97.77 | 91.94 | 90.88 |
 | SeCo | 25.6M | 97.34 | 92.91 | 93.47 |
