@@ -56,14 +56,6 @@ and hierarchical edges link every node to its parent. The pooled scale is *appen
 steps it holds four scales. SLC has no parameters and is not differentiable, but the partition is recomputed at every
 forward pass from features produced by trainable layers, so the hierarchy adapts to the task during training.
 
-<p align="center">
-  <img src="assets/slc_pooling.png" alt="Single-link clustering pooling" width="100%">
-</p>
-
-<p align="center"><em>SLC pooling: edge distances are compared with a percentile threshold, the connected components
-of the short edges become the nodes of the next scale, and the new scale is appended to the multigraph with
-hierarchical (parent-child) edges, in red.</em></p>
-
 **Multigraph processing.** The GP module (three stacked GATv2 convolutions with a residual connection) works on the
 base graph. Each MGP block runs one GATv2 branch on the spatial edges and another on the hierarchical edges, and fuses
 their outputs with an MLP. The RGR sums the node features of each scale and weights the scales with a softmax over
